@@ -31,6 +31,8 @@ function LoginPage(): JSX.Element {
       const res = await fetch(`${import.meta.env.VITE_API_BASE_URI}/login`, {
         method: "POST",
         headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,POST,PUT,PATCH,DELETE",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
